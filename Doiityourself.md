@@ -1,3 +1,0 @@
-- feat: Create adder .{py}
-- feat: Add Feature - Return sum of 2 numbers
-- fix: Rename Function add to adder
