@@ -6,7 +6,6 @@ sys.path.append(gparent)
 
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline]
 
 def monty_hall(n : int):
     """
@@ -47,28 +46,9 @@ def monty_hall(n : int):
         P_keep.append(P_k_i)
         P_c_i = np.mean(change_count[:i]) # proportion of change wins i games
         P_change.append(P_c_i)
-    
+        print(P_change)
     # graphing the results
-    fig, ax = plt.subplots(figsize=(10,5))
-    plt.plot(range(n), P_keep, label='Keep Door')
-    plt.plot(range(n), P_change, label='Change Door')
-    plt.ylabel('Probability of Winning', size=15)
-    plt.xlabel('Number of Simulations', size=15)
-    plt.title('Simulated Probabilities of Winning the Monty Hall Game', size=15)
-    plt.xticks(size = 12)
-    plt.yticks(size = 12)
-    plt.legend(prop={'size': 12})
-    path = os.path.join(gparent,'figures', 'odds.png')
 
-    plt.show()
-    
-    # printing results
-    print('Simulated Probabilities:')
-    print(f'Probability of Winning if Door is Kept:\t \t\
-          {round(np.mean(keep_count), 2)}')
-    print(f'Probability of Winning if Door is Changed:\t\
-          {round(np.mean(change_count), 2)}')      
 
-with warnings.catch_warnings():
-    warnings.simplefilter("ignore", category=RuntimeWarning)
-    monty_hall(5000)
+
+monty_hall(100000)
