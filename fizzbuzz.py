@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
-result = ["fizzbuzz" if i % 15 == 0 else "fizz" if i % 3 == 0 else "buzz" if i % 5 == 0 else i for i in range(16, 31)]
-=======
-result = ["fizzbuzz" if i % 15 ==0 else "fizz" if i % 5 == 0 else "buzz" if i % 3 == 0 else i for i in range(1, 30)] #Implementation of fizzbukzz
+result = ["fizz" if i % 3 == 0 else i for i in range(1, 16)]
 
->>>>>>> update-RM
+#result = ["fizzbuzz" if i % 15 == 0 else "fizz" if i % 3 == 0 else "buzz" if i % 5 == 0 else i for i in range(1, 31)]
 
-
-print(*result, sep="\n")
+print( f"result: {result}\n") 
