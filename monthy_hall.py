@@ -50,5 +50,5 @@ def monty_hall(n : int):
     # graphing the results
 
 
-
-monty_hall(100000)
+if __name__ == "__main__":
+    monty_hall(100000)
